@@ -55,21 +55,21 @@ ssh-keygen -t rsa -C "youremail@example.com"
 登陆GitHub，打开“Account settings”，“SSH Keys”页面，然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
 
 与远程仓库关联，在本地的gitdemo仓库下运行命令：
-git remote add origin git@github.com:ceigt/gitdemo.git
+git remote add origin git@github.com:ceigt/gitskills.git
 
 删除已有的GitHub远程库：
 git remote rm origin
 
 一个本地仓库同时关联两个以上远程仓库：
-git remote add github git@github.com:ceigt/gitdemo.git
-git remote add gitee git@gitee.com：ceigt/gitdemo.git
+git remote add github git@github.com:ceigt/gitskills.git
+git remote add gitee git@gitee.com:ceigt/gitskills.git
 如果要推送到GitHub，使用命令：
 git push github master
 如果要推送到Gitee，使用命令：
 git push gitee master
 
 
-把本地库的所有内容推送到远程库上：
+第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令：
 git push -u origin master
 
 把本地master分支的最新修改推送至GitHub：
