@@ -1,30 +1,30 @@
-配置git用户名和邮箱
+配置git用户名和邮箱：  
 git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
 
-初始化目录，将目录变成git可以管理的仓库
+初始化目录，将目录变成git可以管理的仓库  
 git init
 
-把文件添加到仓库
+把文件添加到仓库  
 git add readme.md    
 git add . (所有更新)
 
-把文件提交到仓库，-m后面输入的是本次提交的说明：
+把文件提交到仓库，-m后面输入的是本次提交的说明：  
 git commit -m “this is a comment”
 
-查看当前状态
+查看当前状态  
 git status
 
-查看修改内容
+查看修改内容  
 git diff readme.md
 
-查看提交日志
-git log
-git log --pretty=oneline 
-git log --pretty=oneline --abbrev-commit
-git log --graph --pretty=oneline --abbrev-commit
+查看提交日志  
+git log  
+git log --pretty=oneline   
+git log --pretty=oneline --abbrev-commit  
+git log --graph --pretty=oneline --abbrev-commit  
 
-回退版本
+回退版本  
 git reset --hard HEAD^ (回退到上一个版本)
 git reset --hard HEAD^^ (回退到上上一个版本)
 git reset --hard HEAD~100 （回退到上一百个版本）
