@@ -57,9 +57,6 @@ ssh-keygen -t rsa -C "youremail@example.com"
 与远程仓库关联，在本地的gitdemo仓库下运行命令  
 git remote add origin git@github.com:ceigt/gitskills.git
 
-删除已有的GitHub远程库  
-git remote rm origin
-
 一个本地仓库同时关联两个以上远程仓库  
 git remote add github git@github.com:ceigt/gitskills.git  
 git remote add gitee git@gitee.com:ceigt/gitskills.git  
@@ -67,7 +64,6 @@ git remote add gitee git@gitee.com:ceigt/gitskills.git
 git push github master  
 如果要推送到Gitee，使用命令  
 git push gitee master  
-
 
 第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令  
 git push -u origin master
@@ -79,7 +75,7 @@ git push origin master
 git remote -v
 
 删除远程库  
-git remote rm (name)  
+git remote rm (name) e.g: git remote rm origin  
 此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。
 
 从GitHub上克隆一个仓库  
