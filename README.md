@@ -166,7 +166,7 @@ git add -f <filename>
 .gitignore写得有问题，需要找出来到底哪个规则写错了  
 git check-ignore -v <filename>  
 把指定文件排除在.gitignore规则外的写法就是!+文件名，只需把例外文件添加进去即可。  
-https://github.com/github/gitignore  gitignore模板
+[gitignore Template](https://github.com/github/gitignore)   
 
 给命令配置别名，如  
 git config --global alias.st status  
@@ -187,10 +187,10 @@ sudo git init --bare sample.git
 git:x:1001:1001:,,,:/home/git:/bin/bash  
 改为  
 git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell  
-要方便管理公钥，用[Gitosis](https://github.com/res0nat0r/gitosis)；  
-要像SVN那样控制权限，用[Gitolite](https://github.com/sitaramc/gitolite)。  
+要方便管理公钥，用[Gitosis](https://github.com/res0nat0r/gitosis)    
+要像SVN那样控制权限，用[Gitolite](https://github.com/sitaramc/gitolite)  
 
-git的图形界面工具推荐https://www.sourcetreeapp.com/  
+git的图形界面工具推荐[SourceTree](https://www.sourcetreeapp.com/ ) 
 
 
 
