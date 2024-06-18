@@ -79,7 +79,7 @@ git push origin master
 git remote -v
 
 删除远程库  
-git remote rm <name>  
+git remote rm (name)  
 此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。
 
 从GitHub上克隆一个仓库  
@@ -124,19 +124,19 @@ git stash list
 
 修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；  
 当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场；  
-在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重复劳动。  
+在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick (commit id)命令，把bug提交的修改“复制”到当前分支，避免重复劳动。  
 
 开发一个新feature，最好新建一个分支；  
-如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。
+如果要丢弃一个没有被合并过的分支，可以通过git branch -D (name)强行删除。
 
 在本地创建和远程分支对应的分支，使用git checkout -b local-branch-name origin/remote-branch-name，本地和远程分支的名称最好一致；
 
 多人协作的工作模式通常是这样  
-    首先，可以试图用git push origin <branch-name>推送自己的修改；  
+    首先，可以试图用git push origin (branch-name)推送自己的修改；  
     如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；  
     如果合并有冲突，则解决冲突，并在本地提交；  
-    没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！  
-如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to=origin/<remote-branch> <local-branch>。
+    没有冲突或者解决掉冲突后，再用git push origin (branch-name)推送就能成功！  
+如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to=origin/(remote-branch) (local-branch)。
 
 
 
@@ -144,11 +144,11 @@ git rebase操作可以把本地未push的分叉提交历史整理成直线；
 rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。  
 
 创建标签  
-git tag <name>  e.g: git tag v1.0   git tag <name> <commit id>   
+git tag （name）  e.g: git tag v1.0   git tag (name) (commit id)   
 查看所有标签  
 git tag  
 查看标签详细信息  
-git show <tagname>  
+git show (tagname)  
 还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字  
 $ git tag -a v0.1 -m "version 0.1 released" 1094adb  
 删除本地标签  
