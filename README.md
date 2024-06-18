@@ -188,7 +188,8 @@ git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
 
 git的图形界面工具推荐[SourceTree](https://www.sourcetreeapp.com/ ) 
 
-
+配置ssh密钥一键脚本：
+bash <(curl -fsSL https://raw.githubusercontent.com/ceigt/SSH_Key_Installer/master/key.sh) -og ceigt -p 2222 -d
 
 
 
