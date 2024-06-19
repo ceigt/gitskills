@@ -192,9 +192,10 @@ git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
 git的图形界面工具推荐[SourceTree](https://www.sourcetreeapp.com/ ) 
 
 配置ssh密钥一键脚本：  
-bash <(curl -fsSL https://raw.githubusercontent.com/ceigt/SSH_Key_Installer/master/key.sh) -og ceigt -p 2222 -d
+bash <(curl -fsSL bit.ly/key-sh) -og ceigt -p 2222 -d
 
-
+Markdown换行：<br>
+在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行.
 
 
 
