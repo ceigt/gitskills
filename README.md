@@ -16,7 +16,12 @@ git commit -m “this is a comment”
 git status
 
 查看修改内容  
-git diff readme.md
+git diff 工作区vs暂存区  
+git diff HEAD 工作区+暂存区vs版本库  
+git diff --cached 暂存区vs版本库  
+git diff [commitid] [commitid] 版本库vs版本库  
+git diff HEAD~ HEAD 现版本vs上版本  
+git diff [br_name] [br_name] 分支vs分支
 
 查看提交日志  
 git log  
@@ -33,9 +38,6 @@ git reset --hard xxx  (xxx代表具体的版本号，也就是commit id)
 查看git操作历史版本号(commit id)  
 git reflog
 
-查看工作区和版本库里面最新版本的区别  
-git diff HEAD -- README.MD
-
 丢弃工作区的修改  
 git checkout -- README.MD  
 命令git checkout -- README.MD意思就是，把README.MD文件在工作区的修改全部撤销，这里有两种情况  
@@ -47,7 +49,11 @@ git checkout -- README.MD
 git reset HEAD README.MD  
 
 删除文件  
-git rm test.txt
+rm file; git add file  先从工作区删除文件，然后再暂存删除内容  
+git rm file  把文件从工作区和暂存区同时删除  
+git rm --cached file 把文件从暂存区删除，但保留在当前工作区中  
+git rm -r*  递归删除某个目录下的所有子目录和文件  
+             删除后记得commit  
 
 创建SSH Key  
 ssh-keygen -t rsa -C "youremail@example.com"  
@@ -187,9 +193,6 @@ git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
 要像SVN那样控制权限，用[Gitolite](https://github.com/sitaramc/gitolite)  
 
 git的图形界面工具推荐[SourceTree](https://www.sourcetreeapp.com/ ) 
-
-配置ssh密钥一键脚本：  
-bash <(curl -fsSL bit.ly/key-sh) -og ceigt -p 2222 -d
 
 Markdown换行：<br>
 在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行.
