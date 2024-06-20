@@ -34,6 +34,9 @@ git reset --hard HEAD^ (回退到上一个版本)
 git reset --hard HEAD^^ (回退到上上一个版本)  
 git reset --hard HEAD~100 （回退到上一百个版本）    
 git reset --hard xxx  (xxx代表具体的版本号，也就是commit id)  
+git reset --soft (工作区和暂存区记录都不会删除)  
+git reset --hard (工作区和暂存区记录都会被删除)  
+git reset --mixed (默认模式，工作区保留，暂存区会被删除)  
 
 查看git操作历史版本号(commit id)  
 git reflog
